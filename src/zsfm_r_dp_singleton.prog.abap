@@ -54,7 +54,7 @@ ENDCLASS.
 START-OF-SELECTION.
   DATA(lo_app1) = lcl_app=>get_instance( ).
   lo_app1->set_date( '20190101' ).
-  WRITE:/ 'Instancia 1: ', lo_app1->get_date( ).
+  WRITE:/ '· Instancia 1: ', lo_app1->get_date( ).
 
   DATA(lo_app2) = lcl_app=>get_instance( ).
-  WRITE:/ 'Instancia 2: ', lo_app2->get_date( ).
+  WRITE:/ '· Instancia 2: ', lo_app2->get_date( ).
