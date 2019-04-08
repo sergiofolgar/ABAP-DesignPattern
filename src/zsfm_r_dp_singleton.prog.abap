@@ -1,11 +1,14 @@
 *&---------------------------------------------------------------------*
 *& Report ZSFM_R_DP_SINGLETON
 *&---------------------------------------------------------------------*
-*&
+*& Patrón de diseño: Singleton
 *&---------------------------------------------------------------------*
 REPORT zsfm_r_dp_singleton.
 
-
+*--------------------------------------------------------------------*
+* La clase LCL_APP se define como privada para evitar que se pueda
+* instanciar
+*--------------------------------------------------------------------*
 CLASS lcl_app DEFINITION CREATE PRIVATE.
   PUBLIC SECTION.
     CLASS-METHODS: get_instance RETURNING VALUE(ro_instance) TYPE REF TO lcl_app.
@@ -20,7 +23,6 @@ ENDCLASS.
 
 
 
-
 CLASS lcl_app IMPLEMENTATION.
 
 *--------------------------------------------------------------------*
@@ -31,7 +33,6 @@ CLASS lcl_app IMPLEMENTATION.
     IF go_app IS INITIAL. CREATE OBJECT go_app. ENDIF.
     ro_instance = go_app.
   ENDMETHOD.
-
 
 *--------------------------------------------------------------------*
 * Asigna a la variable global la fecha pasada por parámetro
@@ -48,7 +49,6 @@ CLASS lcl_app IMPLEMENTATION.
   ENDMETHOD.
 
 ENDCLASS.
-
 
 
 START-OF-SELECTION.
