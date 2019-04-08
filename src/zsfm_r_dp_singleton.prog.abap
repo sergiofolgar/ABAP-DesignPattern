@@ -53,6 +53,7 @@ CLASS lcl_app IMPLEMENTATION.
 ENDCLASS.
 
 
+
 START-OF-SELECTION.
   DATA(lo_app1) = lcl_app=>get_instance( ).
   lo_app1->set_date( '20190101' ).
