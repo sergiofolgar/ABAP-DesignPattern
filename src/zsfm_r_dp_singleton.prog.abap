@@ -2,6 +2,8 @@
 *& Report ZSFM_R_DP_SINGLETON
 *&---------------------------------------------------------------------*
 *& Patrón de diseño: Singleton
+*& Tipo de patrón: Creacional
+*& https://en.wikipedia.org/wiki/Singleton_pattern
 *&---------------------------------------------------------------------*
 REPORT zsfm_r_dp_singleton.
 
