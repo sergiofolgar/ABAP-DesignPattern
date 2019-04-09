@@ -1,11 +1,13 @@
 *&---------------------------------------------------------------------*
 *& Report ZSFM_R_DP_FACTORY
 *&---------------------------------------------------------------------*
+*& Autor: Sergio Folgar
 *& Patrón de diseño: Factory
 *& Tipo de patrón: Creacional
 *& https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)
 *&---------------------------------------------------------------------*
 REPORT zsfm_r_dp_factory.
+
 
 *--------------------------------------------------------------------*
 * Clase factura
@@ -73,9 +75,6 @@ CLASS lcl_factory DEFINITION FINAL.
 ENDCLASS.
 
 CLASS lcl_factory IMPLEMENTATION.
-*--------------------------------------------------------------------*
-* Devuelve el objeto factura
-*--------------------------------------------------------------------*
   METHOD get_bill.
     IF iv_type = '1'.
       CREATE OBJECT ro_bill TYPE lcl_bill_type1.
