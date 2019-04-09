@@ -1,13 +1,16 @@
 *&---------------------------------------------------------------------*
 *& Report ZSFM_R_DP_PROTOTYPE
 *&---------------------------------------------------------------------*
+*& Autor: Sergio Folgar
 *& Patrón de diseño: Prototype
 *& Tipo de patrón: Creacional
 *& https://en.wikipedia.org/wiki/Prototype_pattern
 *&---------------------------------------------------------------------*
 REPORT zsfm_r_dp_prototype.
 
-
+*--------------------------------------------------------------------*
+* Superclase que contiene la lógica principal
+*--------------------------------------------------------------------*
 CLASS lcl_parent DEFINITION ABSTRACT.
   PUBLIC SECTION.
     METHODS: clone ABSTRACT RETURNING VALUE(ro_object) TYPE REF TO lcl_parent,
@@ -18,9 +21,7 @@ CLASS lcl_parent DEFINITION ABSTRACT.
     DATA: gv_date TYPE sydatum.
 ENDCLASS.
 
-
 CLASS lcl_parent IMPLEMENTATION.
-
   METHOD set_date.
     me->gv_date = iv_date.
   ENDMETHOD.
@@ -28,27 +29,23 @@ CLASS lcl_parent IMPLEMENTATION.
   METHOD get_date.
     rv_date = me->gv_date.
   ENDMETHOD.
-
 ENDCLASS.
 
 
-
+*--------------------------------------------------------------------*
+* Subclase que redefine el método de clonación
+*--------------------------------------------------------------------*
 CLASS lcl_child DEFINITION INHERITING FROM lcl_parent.
   PUBLIC SECTION.
     METHODS: clone REDEFINITION.
 ENDCLASS.
 
-
 CLASS lcl_child IMPLEMENTATION.
-
-*--------------------------------------------------------------------*
 * Lógica de clonado del objeto
-*--------------------------------------------------------------------*
   METHOD clone.
     CREATE OBJECT ro_object TYPE lcl_child.
     ro_object->set_date( me->get_date( ) ).
   ENDMETHOD.
-
 ENDCLASS.
 
 
