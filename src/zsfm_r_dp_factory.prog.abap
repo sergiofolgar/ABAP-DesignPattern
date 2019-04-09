@@ -7,7 +7,9 @@
 *&---------------------------------------------------------------------*
 REPORT zsfm_r_dp_factory.
 
-
+*--------------------------------------------------------------------*
+* Clase factura
+*--------------------------------------------------------------------*
 CLASS lcl_bill DEFINITION ABSTRACT.
   PUBLIC SECTION.
     METHODS: get_tax_amount ABSTRACT RETURNING VALUE(rv_tax_amount) TYPE dmbtr,
@@ -28,23 +30,24 @@ CLASS lcl_bill IMPLEMENTATION.
 ENDCLASS.
 
 
-
+*--------------------------------------------------------------------*
+* Factura de tipo 1 - impuesto del 21%
+*--------------------------------------------------------------------*
 CLASS lcl_bill_type1 DEFINITION INHERITING FROM lcl_bill.
   PUBLIC SECTION.
     METHODS: get_tax_amount REDEFINITION.
 ENDCLASS.
 
 CLASS lcl_bill_type1 IMPLEMENTATION.
-*--------------------------------------------------------------------*
-* 21%
-*--------------------------------------------------------------------*
   METHOD get_tax_amount.
     rv_tax_amount = me->get_amount( ) * ( 21 / 100 ).
   ENDMETHOD.
 ENDCLASS.
 
 
-
+*--------------------------------------------------------------------*
+* Factura de tipo 2 - impuesto del 10%
+*--------------------------------------------------------------------*
 CLASS lcl_bill_type2 DEFINITION INHERITING FROM lcl_bill.
   PUBLIC SECTION.
     METHODS: get_tax_amount REDEFINITION.
@@ -60,7 +63,9 @@ CLASS lcl_bill_type2 IMPLEMENTATION.
 ENDCLASS.
 
 
-
+*--------------------------------------------------------------------*
+* Clase factoría encargada de crear el objeto factura
+*--------------------------------------------------------------------*
 CLASS lcl_factory DEFINITION FINAL.
   PUBLIC SECTION.
     CLASS-METHODS: get_bill IMPORTING iv_type        TYPE char1
@@ -79,6 +84,7 @@ CLASS lcl_factory IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 ENDCLASS.
+
 
 
 START-OF-SELECTION.
