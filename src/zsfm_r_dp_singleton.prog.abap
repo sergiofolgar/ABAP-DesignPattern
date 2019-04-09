@@ -25,25 +25,18 @@ CLASS lcl_app DEFINITION CREATE PRIVATE.
 ENDCLASS.
 
 CLASS lcl_app IMPLEMENTATION.
-
-* Devuelve la instancia almacenada en la variable estática go_app
   METHOD get_instance.
     IF go_app IS INITIAL. CREATE OBJECT go_app. ENDIF.
     ro_instance = go_app.
   ENDMETHOD.
 
-* Asigna a la variable global la fecha pasada por parámetro
   METHOD set_date.
     me->gv_date = iv_date.
   ENDMETHOD.
 
-*--------------------------------------------------------------------*
-* Devuelve la fecha almacenada en la instancia
-*--------------------------------------------------------------------*
   METHOD get_date.
     rv_date = me->gv_date.
   ENDMETHOD.
-
 ENDCLASS.
 
 
