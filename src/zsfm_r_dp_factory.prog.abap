@@ -13,12 +13,9 @@ CLASS lcl_bill DEFINITION ABSTRACT.
     METHODS: get_tax_amount ABSTRACT RETURNING VALUE(rv_tax_amount) TYPE dmbtr,
       get_amount RETURNING VALUE(rv_amount) TYPE dmbtr,
       set_amount IMPORTING iv_amount TYPE dmbtr.
-
   PRIVATE SECTION.
     DATA: gv_amount TYPE dmbtr.
 ENDCLASS.
-
-
 
 CLASS lcl_bill IMPLEMENTATION.
   METHOD set_amount.
@@ -37,7 +34,6 @@ CLASS lcl_bill_type1 DEFINITION INHERITING FROM lcl_bill.
     METHODS: get_tax_amount REDEFINITION.
 ENDCLASS.
 
-
 CLASS lcl_bill_type1 IMPLEMENTATION.
 *--------------------------------------------------------------------*
 * 21%
@@ -45,7 +41,6 @@ CLASS lcl_bill_type1 IMPLEMENTATION.
   METHOD get_tax_amount.
     rv_tax_amount = me->get_amount( ) * ( 21 / 100 ).
   ENDMETHOD.
-
 ENDCLASS.
 
 
@@ -55,16 +50,13 @@ CLASS lcl_bill_type2 DEFINITION INHERITING FROM lcl_bill.
     METHODS: get_tax_amount REDEFINITION.
 ENDCLASS.
 
-
 CLASS lcl_bill_type2 IMPLEMENTATION.
-
 *--------------------------------------------------------------------*
 * 10%
 *--------------------------------------------------------------------*
   METHOD get_tax_amount.
     rv_tax_amount = me->get_amount( ) * ( 10 / 100 ).
   ENDMETHOD.
-
 ENDCLASS.
 
 
@@ -74,7 +66,6 @@ CLASS lcl_factory DEFINITION FINAL.
     CLASS-METHODS: get_bill IMPORTING iv_type        TYPE char1
                             RETURNING VALUE(ro_bill) TYPE REF TO lcl_bill.
 ENDCLASS.
-
 
 CLASS lcl_factory IMPLEMENTATION.
 *--------------------------------------------------------------------*
