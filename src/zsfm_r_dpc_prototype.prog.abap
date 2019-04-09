@@ -1,12 +1,12 @@
 *&---------------------------------------------------------------------*
-*& Report ZSFM_R_DP_PROTOTYPE
+*& Report ZSFM_R_DPC_PROTOTYPE
 *&---------------------------------------------------------------------*
 *& Autor: Sergio Folgar
 *& Patrón de diseño: Prototype
 *& Tipo de patrón: Creacional
 *& https://en.wikipedia.org/wiki/Prototype_pattern
 *&---------------------------------------------------------------------*
-REPORT zsfm_r_dp_prototype.
+REPORT zsfm_r_dpc_prototype.
 
 *--------------------------------------------------------------------*
 * Superclase que contiene la lógica principal

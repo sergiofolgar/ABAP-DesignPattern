@@ -3,7 +3,7 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <PROGDIR>
-    <NAME>ZSFM_R_DP_SINGLETON</NAME>
+    <NAME>ZSFM_R_DPC_FACTORY</NAME>
     <STATE>A</STATE>
     <VARCL>X</VARCL>
     <SUBC>1</SUBC>
@@ -14,7 +14,7 @@
    <TPOOL>
     <item>
      <ID>R</ID>
-     <ENTRY>Singleton Pattern</ENTRY>
+     <ENTRY>Factory Pattern</ENTRY>
      <LENGTH>26</LENGTH>
     </item>
    </TPOOL>

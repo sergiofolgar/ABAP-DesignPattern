@@ -1,12 +1,12 @@
 *&---------------------------------------------------------------------*
-*& Report ZSFM_R_DP_SINGLETON
+*& Report ZSFM_R_DPC_SINGLETON
 *&---------------------------------------------------------------------*
 *& Autor: Sergio Folgar
 *& Patrón de diseño: Builder
 *& Tipo de patrón: Creacional
 *& https://en.wikipedia.org/wiki/Builder_pattern
 *&---------------------------------------------------------------------*
-REPORT zsfm_r_dp_builder.
+REPORT zsfm_r_dpc_builder.
 
 
 *--------------------------------------------------------------------*
