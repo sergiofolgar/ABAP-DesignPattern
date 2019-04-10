@@ -14,8 +14,8 @@
    <TPOOL>
     <item>
      <ID>R</ID>
-     <ENTRY>Singleton Pattern</ENTRY>
-     <LENGTH>26</LENGTH>
+     <ENTRY>Creacional: Singleton Pattern</ENTRY>
+     <LENGTH>29</LENGTH>
     </item>
    </TPOOL>
   </asx:values>

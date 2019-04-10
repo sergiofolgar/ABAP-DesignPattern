@@ -14,8 +14,8 @@
    <TPOOL>
     <item>
      <ID>R</ID>
-     <ENTRY>Factory Pattern</ENTRY>
-     <LENGTH>26</LENGTH>
+     <ENTRY>Creacional: Factory Pattern</ENTRY>
+     <LENGTH>27</LENGTH>
     </item>
    </TPOOL>
   </asx:values>
