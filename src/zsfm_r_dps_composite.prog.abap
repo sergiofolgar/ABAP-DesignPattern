@@ -1,5 +1,5 @@
 *&---------------------------------------------------------------------*
-*& Report ZSFM_R_DPS_ADAPTER
+*& Report ZSFM_R_DPS_COMPOSITE
 *&---------------------------------------------------------------------*
 *& Autor: Sergio Folgar
 *& Patrón de diseño: Composite
