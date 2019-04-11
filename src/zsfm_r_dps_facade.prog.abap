@@ -2,7 +2,7 @@
 *& Report ZSFM_R_DPS_FACADE
 *&---------------------------------------------------------------------*
 *& Autor: Sergio Folgar
-*& Patrón de diseño: Composite
+*& Patrón de diseño: Facade
 *& Tipo de patrón: Estructural
 *& https://en.wikipedia.org/wiki/Facade_pattern
 *&---------------------------------------------------------------------*
