@@ -110,10 +110,5 @@ ENDCLASS.
 
 
 START-OF-SELECTION.
-  DATA: lo_shape_red   TYPE REF TO lcl_shape,
-        lo_shape_green TYPE REF TO lcl_shape.
-
-  lo_shape_red ?= NEW lcl_circle( iv_x = 100 iv_y = 100 iv_radius = 10 io_draw = NEW lcl_red_circle( ) ).
-  lo_shape_green ?= NEW lcl_circle( iv_x = 100 iv_y = 100 iv_radius = 10 io_draw = NEW lcl_green_circle( ) ).
-  lo_shape_red->draw( ).
-  lo_shape_green->draw( ).
+  CAST lcl_shape( NEW lcl_circle( iv_x = 100 iv_y = 100 iv_radius = 10 io_draw = NEW lcl_red_circle( ) ) )->draw( ).
+  CAST lcl_shape( NEW lcl_circle( iv_x = 100 iv_y = 100 iv_radius = 10 io_draw = NEW lcl_green_circle( ) ) )->draw( ).
