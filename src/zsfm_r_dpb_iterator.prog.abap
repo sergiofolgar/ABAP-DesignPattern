@@ -2,7 +2,7 @@
 *& Report ZSFM_R_DPB_ITERATOR
 *&---------------------------------------------------------------------*
 *& Autor: Sergio Folgar
-*& Patrón de diseño: Proxy
+*& Patrón de diseño: Iterator
 *& Tipo de patrón: Comportamiento
 *& https://en.wikipedia.org/wiki/Iterator_pattern
 *& http://zevolving.com/2012/01/abap-objects-design-patterns-iterator
